@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <title>IMGUI</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="css/custom.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="header center blue-text">ImageMagick GUI</h1>
+    </div>
+</div>
+
+<div id="checkingConf" class="col s6 card-panel yellow lighten-2">
+    <p><i class="material-icons petite">info_outline</i>Checking Configuration</p>
+</div>
+
+<div id="step1" class="container">
+    <div class="row">
+        <h2 class="center-align blue-text">Step 1 - Select source folder</h2>
+        <hr>
+
+        <h3>Computer</h3>
+        <form action="#">
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>File</span>
+                    <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                    <input type="text" class="file-path validate">
+                </div>
+            </div>
+        </form>
+        <h3>Server</h3>
+        <a id="getScanDir" class="waves-effect waves-light btn-large">Get folder list</a>
+
+        <div id="serverDirList"></div>
+    </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <button id="readDir" name="action" type="submit" class="btn waves-effect waves-light green">Next<i class="material-icons right">send</i></button>
+    </div>
+</div>
+
+<div id="step2" class="container">
+    <div class="row">
+        <h2 class="center-align blue-text">Step 2 - Retrieve Files</h2>
+        <hr>
+    </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; left: 24px;">
+        <button id="bckToStep1" name="action" type="submit" class="btn waves-effect waves-light red">Back</button>
+    </div>
+    <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+        <button id="proceed" name="action" type="submit" class="btn waves-effect waves-light green">Next<i class="material-icons right">send</i></button>
+    </div>
+</div>
+
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+<script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+<script type="application/javascript;version=1.7" src="js/imageMagickGui.js"></script>
+
+</body>
+</html>

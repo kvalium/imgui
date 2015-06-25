@@ -1,0 +1,12 @@
+#checkingConf{
+    position: absolute;
+    top: 0;
+}
+
+#serverDirList ul > li {
+    padding-left: 30px;
+}
+
+#step2{
+    display: none;
+}
